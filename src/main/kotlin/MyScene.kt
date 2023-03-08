@@ -15,6 +15,7 @@ class MyScene : Scene() {
     override suspend fun SContainer.sceneInit() {
         val music = resourcesVfs["puzzle-pieces.mp3"].readMusic()
         music.play(
+            views.coroutineContext,
             PlaybackParameters(
                 times = PlaybackTimes.INFINITE,
                 volume = 0.2
