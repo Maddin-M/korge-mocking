@@ -5,7 +5,6 @@ object MainModule : Module() {
     override val mainScene = MyScene::class
 
     override suspend fun AsyncInjector.configure() {
-        mapPrototype { MyScene(get()) }
-        mapSingleton { Singleton() }
+        mapPrototype { MyScene() }
     }
 }

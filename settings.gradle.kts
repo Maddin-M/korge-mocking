@@ -1,1 +1,1 @@
-rootProject.name = "korge-mocking"
+rootProject.name = "korge-playground"
