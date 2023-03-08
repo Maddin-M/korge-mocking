@@ -6,5 +6,6 @@ object MainModule : Module() {
 
     override suspend fun AsyncInjector.configure() {
         mapPrototype { MyScene() }
+        mapPrototype { MyScene2() }
     }
 }
