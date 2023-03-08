@@ -1,10 +1,10 @@
 import com.soywiz.korge.scene.Module
 import com.soywiz.korinject.AsyncInjector
+import org.mockito.kotlin.mock
 
-object MainModule : Module() {
-    override val mainScene = MyScene::class
-
+object TestModule : Module() {
     override suspend fun AsyncInjector.configure() {
         mapPrototype { MyScene(get()) }
+        mapSingleton<Singleton> { mock() }
     }
 }
