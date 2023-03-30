@@ -1,3 +1,7 @@
-import com.soywiz.korge.Korge
+import korlibs.korge.Korge
+import korlibs.korge.scene.sceneContainer
 
-suspend fun main() = Korge(Korge.Config(MainModule))
+suspend fun main() = Korge().start {
+    injector.mapPrototype { MyScene() }
+    sceneContainer().changeTo<MyScene>()
+}
