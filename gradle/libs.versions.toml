@@ -1,7 +1,7 @@
 [versions]
 # main
 kotlin = "1.8.0"
-korge = "3.4.0"
+korge = "4.0.0-alpha-6"
 # test
 mockito-kotlin = "4.1.0"
 mockito-inline = "4.11.0"

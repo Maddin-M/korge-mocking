@@ -2,6 +2,7 @@ import com.soywiz.korau.sound.PlaybackParameters
 import com.soywiz.korau.sound.PlaybackTimes
 import com.soywiz.korau.sound.readMusic
 import com.soywiz.korge.input.onClick
+import com.soywiz.korge.scene.AlphaTransition
 import com.soywiz.korge.scene.Scene
 import com.soywiz.korge.view.SContainer
 import com.soywiz.korge.view.centerOnStage
@@ -18,14 +19,14 @@ class MyScene : Scene() {
             views.coroutineContext,
             PlaybackParameters(
                 times = PlaybackTimes.INFINITE,
-                volume = 0.2
-            )
+                volume = 0.2,
+            ),
         )
         text("scene1 - click square for scene2")
         solidRect(100, 100, Colors.BLUE) {
             centerOnStage()
             onClick {
-                sceneContainer.changeTo<MyScene2>()
+                sceneContainer.changeTo<MyScene2>(transition = AlphaTransition)
             }
         }
     }

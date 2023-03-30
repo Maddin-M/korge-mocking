@@ -1,4 +1,5 @@
 import com.soywiz.korge.input.onClick
+import com.soywiz.korge.scene.AlphaTransition
 import com.soywiz.korge.scene.Scene
 import com.soywiz.korge.view.SContainer
 import com.soywiz.korge.view.centerOnStage
@@ -13,7 +14,7 @@ class MyScene2 : Scene() {
         solidRect(100, 100, Colors.RED) {
             centerOnStage()
             onClick {
-                sceneContainer.changeTo<MyScene>()
+                sceneContainer.changeTo<MyScene>(transition = AlphaTransition)
             }
         }
     }
